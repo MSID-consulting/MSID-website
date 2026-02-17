@@ -1,133 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mitra Solusi Integrasi Data</title>
+  <meta charset="UTF-8">
+  <title>Mitra Solusi Integrasi </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --primary: #0F172A;
+      --accent: #2563EB;
+      --light: #F8FAFC;
+      --text: #334155;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: white;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 100px 0;
+    }
+
+    h1, h2, h3 {
+      color: var(--primary);
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      color: var(--text);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+      margin-top: 24px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-image {
+      flex: 1;
+    }
+
+    .hero-image img {
+      width: 100%;
+    }
+
+    /* SERVICES */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      margin-bottom: 20px;
+      color: var(--accent);
+    }
+
+    /* WHY US */
+    .why {
+      background: var(--light);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      margin-top: 50px;
+    }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      background: var(--primary);
+      color: white;
+    }
+
+    .cta h2 {
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      font-size: 14px;
+      background: #0B1120;
+      color: #CBD5E1;
+    }
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .grid-3,
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+    }
+
+  </style>
 </head>
 
 <body>
 
-<header>
-  <div class="container nav">
-    <div class="logo">
-      <strong>Mitra Solusi</strong> Integrasi Data
-    </div>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#methodology">Methodology</a>
-      <a href="#industries">Industries</a>
-      <a href="#contact" class="btn-small">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="container hero-content">
+<!-- HERO -->
+<section>
+  <div class="container hero">
     <div class="hero-text">
-      <h1>Driving Measurable Transformation<br>Through System, Data, and Strategy</h1>
+      <h1>Strategic IT & Business Transformation Partner</h1>
       <p>
-        We help manufacturing and growth-oriented organizations optimize operations,
-        integrate enterprise systems, and transform data into strategic decision power.
+        Mitra Solusi Integrasi Data helps organizations implement ERP, Business Intelligence,
+        and digital transformation strategies to drive measurable growth.
       </p>
-      <div class="hero-buttons">
-        <a href="#contact" class="btn-primary">Request Consultation</a>
-        <a href="#methodology" class="btn-outline">Our Framework</a>
-      </div>
+      <a href="#contact" class="btn">Schedule Consultation</a>
+    </div>
+
+    <div class="hero-image">
+      <!-- Replace with SVG illustration later -->
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Analytics Dashboard">
     </div>
   </div>
 </section>
 
-<section class="value">
+<!-- SERVICES -->
+<section>
   <div class="container">
-    <h2>We Don’t Sell Software. We Design Solutions.</h2>
-    <p>
-      Our focus is measurable business improvement — aligning Process, System,
-      Data, and Strategy into a structured transformation framework.
-    </p>
-  </div>
-</section>
+    <h2>Our Core Services</h2>
 
-<section id="services" class="services">
-  <div class="container">
-    <h2>Core Capabilities</h2>
     <div class="grid-3">
       <div class="card">
-        <h3>ERP Implementation & Integration</h3>
-        <p>End-to-end ERP deployment, customization, system integration, and long-term support.</p>
+        <div class="icon">
+          <i data-lucide="database"></i>
+        </div>
+        <h3>ERP Implementation</h3>
+        <p>End-to-end ERP deployment tailored to your operational structure and growth strategy.</p>
       </div>
+
       <div class="card">
-        <h3>Business Intelligence & Data Architecture</h3>
-        <p>Data warehouse, ETL, KPI framework, and executive dashboards.</p>
+        <div class="icon">
+          <i data-lucide="bar-chart-3"></i>
+        </div>
+        <h3>Business Intelligence</h3>
+        <p>Transform data into actionable insights through advanced analytics and dashboard systems.</p>
       </div>
+
       <div class="card">
-        <h3>Business Consulting & Operational Excellence</h3>
-        <p>Process optimization, Lean initiatives, and performance improvement strategy.</p>
+        <div class="icon">
+          <i data-lucide="settings"></i>
+        </div>
+        <h3>System Integration</h3>
+        <p>Seamless integration across platforms to ensure efficiency and operational alignment.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="methodology" class="methodology">
+<!-- WHY US -->
+<section class="why">
   <div class="container">
-    <h2>Our Transformation Framework</h2>
-    <div class="grid-4">
-      <div class="step">
-        <h3>1. Assess</h3>
-        <p>Process mapping, system review, KPI gap analysis.</p>
+    <h2>Why Choose Mitra Solusi Integrasi Data</h2>
+
+    <div class="why-grid">
+      <div>
+        <h3>Strategic Approach</h3>
+        <p>We align technology implementation with long-term business objectives.</p>
       </div>
-      <div class="step">
-        <h3>2. Optimize</h3>
-        <p>Process redesign, control framework, efficiency improvement.</p>
+
+      <div>
+        <h3>Experienced Consultants</h3>
+        <p>Our team combines technical expertise with deep industry knowledge.</p>
       </div>
-      <div class="step">
-        <h3>3. Integrate</h3>
-        <p>ERP implementation, system integration, data architecture.</p>
+
+      <div>
+        <h3>Data-Driven Decisions</h3>
+        <p>We focus on measurable KPIs and real business impact.</p>
       </div>
-      <div class="step">
-        <h3>4. Transform</h3>
-        <p>Data-driven culture, governance, continuous improvement.</p>
+
+      <div>
+        <h3>Long-Term Partnership</h3>
+        <p>Beyond implementation — we ensure sustainability and scalability.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="industries" class="industries">
+<!-- CTA -->
+<section class="cta" id="contact">
   <div class="container">
-    <h2>Industries We Serve</h2>
-    <div class="grid-3">
-      <div class="card">
-        <h3>Manufacturing</h3>
-        <p>Production optimization, cost control, inventory efficiency.</p>
-      </div>
-      <div class="card">
-        <h3>Distribution & Supply Chain</h3>
-        <p>Demand visibility, stock management, sales analytics.</p>
-      </div>
-      <div class="card">
-        <h3>Growth-Stage Enterprises</h3>
-        <p>Digital roadmap, system integration, scalable process design.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-  <div class="container">
-    <h2>Start Your Transformation Journey</h2>
-    <p>Let’s discuss how we can help your organization achieve operational clarity and growth.</p>
-    <a href="mailto:info@yourcompany.com" class="btn-primary">Contact Us</a>
+    <h2>Ready to Transform Your Business?</h2>
+    <p>Contact us to discuss how we can support your digital transformation journey.</p>
+    <a href="mailto:info@mitrasolusiintegrasi.com" class="btn">Contact Us</a>
   </div>
 </section>
 
 <footer>
-  <div class="container footer">
-    <p>© 2026 Mitra Solusi Integrasi Data. All Rights Reserved.</p>
-  </div>
+  © 2026 Mitra Solusi Integrasi Data. All rights reserved.
 </footer>
+
+<script>
+  lucide.createIcons();
+</script>
 
 </body>
 </html>
